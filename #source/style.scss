@@ -217,11 +217,13 @@ body {
         position: relative;
         @include adaptive-value("font-size", 16, 20);
 
-        &:hover {
-            color: $gold;
-
-            &::after {
-                width: 100%;
+        @media(any-hover:hover) {
+            &:hover {
+                color: $gold;
+    
+                &::after {
+                    width: 100%;
+                }
             }
         }
 
